@@ -1,4 +1,4 @@
-import type { Category, Subcategory } from '@/db/schema'
+//import type { Category, Subcategory } from '@/db/schema'
 
 import { generateId } from '@/functions/id'
 
@@ -161,12 +161,13 @@ export const productConfig = {
         },
       ],
     },
-  ] satisfies ({
-    subcategories: Omit<
-      Subcategory,
-      'slug' | 'categoryId' | 'createdAt' | 'updatedAt'
-    >[]
-  } & Pick<Category, 'id' | 'name' | 'description' | 'image'>)[],
+  
+  ]  // ] satisfies ({
+  //   subcategories: Omit<
+  //     //Subcategory,
+  //     'slug' | 'categoryId' | 'createdAt' | 'updatedAt'
+  //   >[]
+  // } & Pick<Category, 'id' | 'name' | 'description' | 'image'>)[],
 }
 
 export type ProductConfig = typeof productConfig
