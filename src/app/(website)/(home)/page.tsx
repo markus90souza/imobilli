@@ -66,7 +66,11 @@ const HomePage = () => {
   // }
 
   return (
-    <h1>home</h1>
+    <>
+      <Header />
+      <h1>home</h1>
+      <Footer />
+    </>
     // <div className="flex min-h-screen flex-col">
     //  <Header />
     //   <main className="flex-1">
