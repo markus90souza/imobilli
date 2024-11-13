@@ -7,15 +7,15 @@ import Image from 'next/image'
 import { useState } from 'react'
 export  function Destaques() {
 
-  const [selectedProperties, setSelectedProperties] = useState([])
+  // const [selectedProperties, setSelectedProperties] = useState([])
 
-  const togglePropertySelection = (propertyId: any) => {
-    setSelectedProperties(prev => 
-      prev.includes(propertyId)
-        ? prev.filter(id => id !== propertyId)
-        : [...prev, propertyId]
-    )
-  }
+  // const togglePropertySelection = (propertyId: any) => {
+  //   setSelectedProperties(prev => 
+  //     prev.includes(propertyId)
+  //       ? prev.filter(id => id !== propertyId)
+  //       : [...prev, propertyId]
+  //   )
+  // }
   return (
     <section className="container py-12">
     <div className="flex items-center justify-between mb-8">
@@ -29,7 +29,7 @@ export  function Destaques() {
         </Button>
       </div>
     </div>
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {/* <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {Array.from({ length: 6 }).map((_, i) => (
         <Card key={i} className="group relative overflow-hidden">
           <CardContent className="p-0">
@@ -70,7 +70,7 @@ export  function Destaques() {
           </CardContent>
         </Card>
       ))}
-    </div>
+    </div> */}
   </section>
   )
 }
