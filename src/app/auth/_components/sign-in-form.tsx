@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { useRouter } from 'next/navigation'
-import { useSignIn } from '@clerk/nextjs'
+//import { useSignIn } from '@clerk/nextjs'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import type { z } from 'zod'
@@ -26,7 +26,7 @@ type Inputs = z.infer<typeof authSchema>
 
 export function SignInForm() {
   const router = useRouter()
-  const { isLoaded, signIn, setActive } = useSignIn()
+  //const { isLoaded, signIn, setActive } = useSignIn()
   const [loading, setLoading] = React.useState(false)
 
   // react-hook-form
@@ -39,24 +39,24 @@ export function SignInForm() {
   })
 
   async function onSubmit(data: Inputs) {
-    if (!isLoaded) return
+    //if (!isLoaded) return
 
     setLoading(true)
 
     try {
-      const result = await signIn.create({
-        identifier: data.email,
-        password: data.password,
-      })
+      // const result = await signIn.create({
+      //   identifier: data.email,
+      //   password: data.password,
+      // })
 
-      if (result.status === 'complete') {
-        await setActive({ session: result.createdSessionId })
+      // if (result.status === 'complete') {
+      // //await setActive({ session: result.createdSessionId })
 
-        router.push(`${window.location.origin}/`)
-      } else {
-        /* Investigate why the login hasn't completed */
-        console.log(result)
-      }
+      //   router.push(`${window.location.origin}/`)
+      // } else {
+      //   /* Investigate why the login hasn't completed */
+      //   console.log(result)
+      // }
     } catch (err) {
       showErrorToast(err)
     } finally {

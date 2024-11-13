@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { useSignIn } from '@clerk/nextjs'
+
 import { type OAuthStrategy } from '@clerk/types'
 
 import { showErrorToast } from '@/functions/handler-error'
@@ -19,22 +19,22 @@ const oauthProviders = [
 
 export function OAuthSignIn() {
   const [loading, setLoading] = React.useState<OAuthStrategy | null>(null)
-  const { signIn, isLoaded: signInLoaded } = useSignIn()
+  //const { signIn, isLoaded: signInLoaded } = useSignIn()
 
   async function oauthSignIn(provider: OAuthStrategy) {
-    if (!signInLoaded) return null
+    // if (!signInLoaded) return null
 
-    try {
-      setLoading(provider)
-      await signIn.authenticateWithRedirect({
-        strategy: provider,
-        redirectUrl: '/sso-callback',
-        redirectUrlComplete: '/',
-      })
-    } catch (err) {
-      setLoading(null)
-      showErrorToast(err)
-    }
+    // try {
+    //   setLoading(provider)
+    //   await signIn.authenticateWithRedirect({
+    //     strategy: provider,
+    //     redirectUrl: '/sso-callback',
+    //     redirectUrlComplete: '/',
+    //   })
+    // } catch (err) {
+    //   setLoading(null)
+    //   showErrorToast(err)
+    // }
   }
 
   return (
