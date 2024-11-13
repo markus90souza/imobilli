@@ -1,9 +1,9 @@
-import { type Store } from "@/db/schema"
-import { type SQL } from "drizzle-orm"
-import type Stripe from "stripe"
-import { type ClientUploadedFileData } from "uploadthing/types"
+//import { type Store } from '@/db/schema'
+import { type SQL } from 'drizzle-orm'
+import type Stripe from 'stripe'
+import { type ClientUploadedFileData } from 'uploadthing/types'
 
-import type { Icons } from "@/components/icons"
+import type { Icons } from '@/components/icons'
 
 export interface NavItem {
   title: string
@@ -66,29 +66,29 @@ export type DrizzleWhere<T> =
 
 export type StripePaymentStatus = Stripe.PaymentIntent.Status
 
-export interface Plan {
-  id: Store["plan"]
-  title: string
-  description: string
-  features: string[]
-  stripePriceId: string
-  limits: {
-    stores: number
-    products: number
-    tags: number
-    variants: number
-  }
-}
+// export interface Plan {
+//   id: Store['plan']
+//   title: string
+//   description: string
+//   features: string[]
+//   stripePriceId: string
+//   limits: {
+//     stores: number
+//     products: number
+//     tags: number
+//     variants: number
+//   }
+// }
 
-export interface PlanWithPrice extends Plan {
-  price: string
-}
+// export interface PlanWithPrice extends Plan {
+//   price: string
+// }
 
-export interface UserPlan extends Plan {
-  stripeSubscriptionId?: string | null
-  stripeCurrentPeriodEnd?: string | null
-  stripeCustomerId?: string | null
-  isSubscribed: boolean
-  isCanceled: boolean
-  isActive: boolean
-}
+// export interface UserPlan extends Plan {
+//   stripeSubscriptionId?: string | null
+//   stripeCurrentPeriodEnd?: string | null
+//   stripeCustomerId?: string | null
+//   isSubscribed: boolean
+//   isCanceled: boolean
+//   isActive: boolean
+// }

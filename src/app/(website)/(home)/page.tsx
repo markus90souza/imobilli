@@ -1,14 +1,35 @@
-
-
 import { useState, useEffect } from 'react'
-import { Search, MapPin, Building2, Home, Key, Filter, Building, Warehouse, ChevronLeft, ChevronRight, Star, ArrowUp, Menu, X, MessageCircle, Home as HomeIcon } from 'lucide-react'
-import Link from "next/link"
-import Image from "next/image"
+import {
+  Search,
+  MapPin,
+  Building2,
+  Home,
+  Key,
+  Filter,
+  Building,
+  Warehouse,
+  ChevronLeft,
+  ChevronRight,
+  Star,
+  ArrowUp,
+  Menu,
+  X,
+  MessageCircle,
+  Home as HomeIcon,
+} from 'lucide-react'
+import Link from 'next/link'
+import Image from 'next/image'
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Slider } from "@/components/ui/slider"
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+import { Slider } from '@/components/ui/slider'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,10 +37,14 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
-import { Card, CardContent } from "@/components/ui/card"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+} from '@/components/ui/navigation-menu'
+import { Card, CardContent } from '@/components/ui/card'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover'
 import { Header } from './components/header'
 import { Footer } from './components/footer'
 import { Destaques } from './components/destaques'
@@ -39,7 +64,6 @@ const HomePage = () => {
   // const scrollToTop = () => {
   //   window.scrollTo({ top: 0, behavior: 'smooth' })
   // }
-
 
   return (
     <h1>home</h1>
@@ -148,9 +172,9 @@ const HomePage = () => {
     //         ))}
     //       </div>
     //     </section>*/}
-    //   </main> 
+    //   </main>
     //   <Footer />
-     
+
     //   {/* {showBackToTop && (
     //     <Button
     //       className="fixed bottom-4 right-4 rounded-full"
@@ -186,4 +210,4 @@ const HomePage = () => {
   )
 }
 
-export default Home
+export default HomePage
