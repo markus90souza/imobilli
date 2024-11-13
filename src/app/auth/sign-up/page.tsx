@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 
 export default function SignUpPage() {
   return (
-    <Shell className="max-w-lg bg-red-800">
-      <Card className="bg-red-200">
+    <Shell className="max-w-lg">
+      <Card className="">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl">Sign up</CardTitle>
           <CardDescription>
