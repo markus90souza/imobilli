@@ -72,7 +72,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <ClerkProvider>
+
       <html lang="pt-BR" suppressHydrationWarning>
         <head />
         <body
@@ -93,6 +93,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Toaster /> */}
         </body>
       </html>
-    </ClerkProvider>
+    
   )
 }
