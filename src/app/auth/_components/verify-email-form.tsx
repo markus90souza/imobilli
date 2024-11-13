@@ -25,7 +25,7 @@ type Inputs = z.infer<typeof verifyEmailSchema>
 
 export function VerifyEmailForm() {
   const router = useRouter()
-  const { isLoaded, signUp, setActive } = useSignUp()
+  //const { isLoaded, signUp, setActive } = useSignUp()
   const [loading, setLoading] = React.useState(false)
 
   // react-hook-form
@@ -37,24 +37,24 @@ export function VerifyEmailForm() {
   })
 
   async function onSubmit(data: Inputs) {
-    if (!isLoaded) return
+    //if (!isLoaded) return
 
     setLoading(true)
 
     try {
-      const completeSignUp = await signUp.attemptEmailAddressVerification({
-        code: data.code,
-      })
-      if (completeSignUp.status !== 'complete') {
-        /*  investigate the response, to see if there was an error
-             or if the user needs to complete more steps. */
-        console.log(JSON.stringify(completeSignUp, null, 2))
-      }
-      if (completeSignUp.status === 'complete') {
-        await setActive({ session: completeSignUp.createdSessionId })
+      // const completeSignUp = await signUp.attemptEmailAddressVerification({
+      //   code: data.code,
+      // })
+      // if (completeSignUp.status !== 'complete') {
+      //   /*  investigate the response, to see if there was an error
+      //        or if the user needs to complete more steps. */
+      //   console.log(JSON.stringify(completeSignUp, null, 2))
+      // }
+      // if (completeSignUp.status === 'complete') {
+      //   await setActive({ session: completeSignUp.createdSessionId })
 
         router.push(`${window.location.origin}/`)
-      }
+      // }
     } catch (err) {
       showErrorToast(err)
     } finally {
