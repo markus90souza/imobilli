@@ -13,10 +13,11 @@ import useEmblaCarousel from 'embla-carousel-react'
 export default function Component() {
   const [isFavorite, setIsFavorite] = useState(false)
   const [isSticky, setIsSticky] = useState(false)
-  const [mainCarouselApi, setMainCarouselApi] = useEmblaCarousel({ })
+  const [mainCarouselApi, setMainCarouselApi] = useEmblaCarousel({})
   const [thumbCarouselApi, setThumbCarouselApi] = useEmblaCarousel({
     containScroll: 'keepSnaps',
     dragFree: true,
+
   })
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -42,9 +43,9 @@ export default function Component() {
     "/placeholder.svg?height=600&width=800&text=Image 5",
   ]
 
-  const scrollTo = (index: number) => {
-    if (mainCarouselApi) mainCarouselApi.scrollTo(index)
-  }
+  // const scrollTo = (index: number) => {
+  //   if (mainCarouselApi) mainCarouselApi.scrollTo(index)
+  // }
 
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index)
@@ -114,7 +115,8 @@ export default function Component() {
                 <CardContent className="p-1">
                   <div className="relative">
                     <Carousel
-                      setApi={setMainCarouselApi}
+                    setApi={ () => setMainCarouselApi}
+                     // setApi={setMainCarouselApi}
                       className="w-full"
                     >
                       <CarouselContent>
@@ -140,7 +142,7 @@ export default function Component() {
                   </div>
                   <div className="mt-2">
                     <Carousel
-                      setApi={setThumbCarouselApi}
+                      setApi={() => setThumbCarouselApi}
                       className="w-full"
                       opts={{
                         align: 'start',
@@ -152,7 +154,9 @@ export default function Component() {
                           <CarouselItem key={index} className="pl-1 basis-1/5">
                             <div
                               className="relative aspect-[4/3] cursor-pointer"
-                              onClick={() => scrollTo(index)}
+                              onClick={() =>{
+                                
+                              }}
                             >
                               <Image
                                 src={src}
