@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { VariantProps, cva } from 'class-variance-authority'
-import { useIsMobile } from '@/functions/hooks/use-mobile'
+import { useIsMobile } from '../../hooks/use-mobile'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -17,7 +17,7 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 import { ViewVerticalIcon } from '@radix-ui/react-icons'
-import { X } from 'lucide-react'
+import { LayoutDashboard, LayoutGrid, X } from 'lucide-react'
 
 const SIDEBAR_COOKIE_NAME = 'sidebar:state'
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -279,14 +279,14 @@ const SidebarTrigger = React.forwardRef<
       data-sidebar="trigger"
       variant="ghost"
       size="icon"
-      className={cn('h-7 w-7', className)}
+      className={cn('h-8 w-8', className)}
       onClick={(event) => {
         onClick?.(event)
         toggleSidebar()
       }}
       {...props}
     >
-      {open ? <ViewVerticalIcon /> : <X />}
+      {open ? <LayoutGrid /> : <LayoutDashboard />}
 
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
