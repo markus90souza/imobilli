@@ -17,7 +17,8 @@ export const metadata: Metadata = {
   description: "Verify your email address to continue with your sign up",
 }
 
-export default function VerifyEmailPage() {
+
+const VerifyEmailPage = () => {
   return (
     <Shell className="max-w-lg">
       <Card>
@@ -28,9 +29,11 @@ export default function VerifyEmailPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">
-          <VerifyEmailForm />
+           <VerifyEmailForm /> 
         </CardContent>
       </Card>
     </Shell>
   )
 }
+
+export default VerifyEmailPage
