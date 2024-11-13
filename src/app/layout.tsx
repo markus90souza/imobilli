@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/icon.png',
   },
-  manifest: absoluteUrl('/site.webmanifest'),
+  //manifest: absoluteUrl('/site.webmanifest'),
 }
 
 export const viewport: Viewport = {

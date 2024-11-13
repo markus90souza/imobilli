@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { siteConfig } from '@/config/site'
 import { Icons } from '@/components/icons'
-import { useIsMobile } from '@/hooks/use-mobile'
+import { useIsMobile } from '@/functions/hooks/use-mobile'
 import type { FC, ReactNode } from 'react'
 
 type AuthLayoutProps = {
